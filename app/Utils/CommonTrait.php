@@ -30,12 +30,12 @@ trait CommonTrait
 
     public function callDataLayerApi($endpoint, $type, $input = [])
     {
+        
         if($type == 'auth') {
             $header = $this->getApiAuthHeader();
         } else {
             $header = $this->getApiHeader();
         }
-        
         try {
             $response = $this->getGuzzleClient()->post($endpoint, 
                 [
@@ -48,6 +48,7 @@ trait CommonTrait
             
             if($response->getStatusCode()==200) {
                 $body = $response->getBody()->getContents();
+                
                 $output['bodyContent'] = json_decode($body, true);
                 $output['status'] = 200;
             } 

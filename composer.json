@@ -10,8 +10,7 @@
         "guzzlehttp/guzzle": "^6.1",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "laravelcollective/html": "^5.3.0",
-        "laravelnews/laravel-twbs4": "^1.2"
+        "laravelcollective/html": "^5.3.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

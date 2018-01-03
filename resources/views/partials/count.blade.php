@@ -1,6 +1,15 @@
 <div class="col-sm-12 total-data">
 	<div class="row">
-		<div class="col-sm-7 ">
+<form class="form-inline" action="/action_page.php">
+  <div class="form-group">
+    <label for="start-date">Aplication Start Date</label>
+    <input class="date-picker" type="text" id="start-date" name="start-date">
+    <input class="date-picker" type="text" id="end-date" name="end-date">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form> 
+
+		<!--<div class="col-sm-7 ">
 			<div class="bg-white clearfix">
 				<div class="col-sm-2 date-display">
 					<div class="trigger cursor-pointer">
@@ -82,12 +91,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-sm-8">
-			<div class="bg-white applications-data clearfix line-chart-height">
-			</div>
-		</div>		
-		<!--<div class="col-sm-5">
+		</div>	
+		<div class="col-sm-5">
 			<div class="bg-white applications-data clearfix line-chart-height">
 				<?php $total = (empty($count['firstMonth']) === false ? $count['firstMonth'] : 0) + (empty($count['secondMonth']) === false ? $count['secondMonth'] : 0) + (empty($count['thirdMonth']) === false ? $count['thirdMonth'] : 0)?>
 				<p class="text-blue font-16">{{$total}}

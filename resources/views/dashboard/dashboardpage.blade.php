@@ -16,18 +16,11 @@
 				<thead>
 					<tr>
 						<th>Reference Number</th>
-						<th>Customer Name</th>
-						<th>Time stamp</th>
-						<th>Overall Score</th>
-						<th>Stability Score</th>
-						<th>Intent Score</th>
-						<th>ID Score</th>
-						<th>Contactability Score</th>
-						<th>Input Score</th>
-						<th>Status</th>
-						<th>Approve</th>
-						<th>Reject</th>
-						<th>Shortlist</th>
+						<th>Name</th>
+						<th>Application Start Date</th>
+						<th>Age of Application</th>
+						<th>Platform Number</th>
+						<th>Branch Verification Decision</th>
 					</tr>
 				</thead>
 					<tbody>

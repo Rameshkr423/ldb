@@ -30,29 +30,4 @@
 			</ul>
 		</div>
 	</div>
-	<div class="row">
-		<div class="contact-box">
-			<div class="assistance">
-				<p class="text-center">For assistance</p>
-				<div class="media">
-					<div class="media-left">
-						<i class="icon-volume-control-phone"></i>
-					</div>
-					<div class="media-body media-middle">
-						<p>Call us anytime</p>
-						<p>+91 444224 0800</p>
-					</div>
-				</div>
-				<div class="media">
-					<div class="media-left">
-						<i class="icon-doc-text"></i>
-					</div>
-					<div class="media-body media-middle">
-						<p>Learning Center</p>
-					</div>
-				</div>
-				<button class="mailer"><i class=" icon-mail"></i> Product Manager</button>
-			</div>
-		</div>
-	</div>
 </div>
