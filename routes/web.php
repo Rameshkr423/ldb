@@ -19,7 +19,6 @@ Route::group(['middleware' => 'login'], function(){
 	Route::post('/login', ['as'=> 'login', 'uses' => 'AuthController@postLogin']);
 });
 
-Route::group(['middleware' => 'jwtAuth'], function () {
 	Route::get('/dashboard', ['middleware' => 'acl:dashboard', 'as'=> 'dashboard', 'uses' => 'DashboardController@getCollection']);
 	Route::get('/processed', ['middleware' => 'acl:processed', 'as'=> 'processed', 'uses' => 'ProcessedController@getCollection']);
 	Route::get('/export', ['middleware' => 'acl:export', 'as'=> 'export', 'uses' => 'ExportController@exportCollection']);
@@ -39,6 +38,5 @@ Route::group(['middleware' => 'jwtAuth'], function () {
 
 	//Upload
 	Route::get('/upload', ['middleware' => 'acl:dashboard', 'uses' => 'UploadController@uploadFile'])->name('upload');
-});
 
 Route::get('/logout', ['uses' => 'AuthController@logout'])->name('logout');
