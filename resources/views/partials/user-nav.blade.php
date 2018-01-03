@@ -62,19 +62,13 @@
 	<div class="clearfix">
 		<div class="ldb-tab-inner">
 			<ul class="nav nav-pills">
-				<li class="active"><a data-toggle="pill" href="#general-info">GENERAL INFORMATION</a></li>
+				<li class="active"><a data-toggle="pill" href="#general-info">PERSONAL INFORMATION</a></li>
+				<li><a data-toggle="pill" href="#business-info">BUSINESS INFORMATION</a></li>
 				@if(canAccess('rule-engine-view'))
 				<li><a data-toggle="pill" href="#rule-englog">RULE ENGINE</a></li>
 				@endif
-				<li><a data-toggle="pill" href="#stablity">STABLITY</a></li>
-				<li><a data-toggle="pill" href="#ability">ABILITY</a></li>
-				<li><a data-toggle="pill" href="#indent">INTENT</a></li>
-				<li><a data-toggle="pill" href="#contactabilty">CONTACTABILTY</a></li>
-				<li><a data-toggle="pill" href="#id-score">ID SCORE</a></li>
-				<li><a data-toggle="pill" href="#other">OTHER</a></li>
-				@if(canAccess('json-view'))
-					<li><a data-toggle="pill" href="#final-result">JSON RESULT</a></li>
-				@endif
+				<li><a data-toggle="pill" href="#user-uploaded-documents">USER UPLOADED DOCUMENTS</a></li>
+				<li><a data-toggle="pill" href="#branch-verification-decision">BRANCH VERIFICATION DECISION</a></li>
 			</ul>
 		</div>
 	</div>

@@ -23,7 +23,6 @@ class AuthController extends Controller
         $input['password'] = $request->password;
 
         $result = $this->callDataLayerApi($endpoint, $type='api', $input);
-        
         if($result['status'] == 200) {
             if(empty($result['bodyContent']['data']['executive_details']) === false) {
             	Session::put('data', $result['bodyContent']['data']);

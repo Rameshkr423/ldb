@@ -14,8 +14,9 @@ trait CommonTrait
 
     public function getApiAuthHeader()
     {
-    	 $authToken = Session::get('data.auth_token.authorization');
-
+    	$authToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OWZjNmM5MTgwNzkwMDI4MzM2NWU1MDUiLCJleHAiOjE1MjIxNzMxMDAsImNvbnRleHQiOnsiZW1haWwiOiJhcHBkZW1vQGNyZWRpdG1hbnRyaS5jb20ifX0.WbD5NCOyezcU-Q8rl0Pu50OlkWUnqbI55YCQpNZRtSc'; 
+        //Session::get('data.auth_token.authorization');
+        
     	if (empty($authToken) === false) {
     		return array_merge(config('lenderdashboard.header.login'), ['Authorization' => 'Bearer '.$authToken]);
     	}
@@ -36,6 +37,7 @@ trait CommonTrait
         } else {
             $header = $this->getApiHeader();
         }
+
         try {
             $response = $this->getGuzzleClient()->post($endpoint, 
                 [

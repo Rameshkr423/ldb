@@ -1,9 +1,5 @@
 @extends('layouts.dashboard')
 
-@section('dummy')
-	@include('partials.test')
-@endsection
-
 @section('content')
 <div class="flex-item col-sm-10 clearfix">
 	<div class="row">
@@ -49,33 +45,7 @@
 										{{$collection['score']['overallGrade']}}
 									@endif
 								</td>
-								<td>
-									@if(empty($collection['score']['stabilityGrade']) === false) 
-										{{$collection['score']['stabilityGrade']}}
-									@endif
-								</td>
-								<td>
-									@if(empty($collection['score']['intentGrade']) === false) 
-										{{$collection['score']['intentGrade']}}
-									@endif
-								</td>
-								<td>
-									@if(empty($collection['score']['idGrade']) === false) 
-										{{$collection['score']['idGrade']}}
-									@endif
-								</td>
-								<td>
-									@if(empty($collection['score']['contactibilityGrade']) === false) 
-										{{$collection['score']['contactibilityGrade']}}
-									@endif
-								</td>
-								<td>
-									@if(empty($collection['is_auto']) === false) 
-										{{{'Auto'}}}
-									@else
-										{{{'Manual'}}}
-									@endif
-								</td>
+								<td></span>Pilot</span></td>
 								<td>
 									<span class="text-red">
 										@if(empty($collection['transactionStatus']) === false) 
@@ -83,9 +53,6 @@
 										@endif
 									</span>
 								</td>
-								<td></ins></span><a href="#"><span><i class="icon-ok-circle text-green font-16 status-action" status-block="approve"></i></span></a></td>
-								<td><a href="#"><span><i class="icon-cancel-circled text-gray font-16 status-action" status-block="reject"></i></span></a></td>
-								<td><a href="#"><span><i class="icon-pause-circled text-gold font-16 status-action" status-block="shortlist"></i></span></a></td>
 							</tr>
 						@endforeach
 					@endif

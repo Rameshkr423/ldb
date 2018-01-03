@@ -1,13 +1,13 @@
 <div class="col-sm-12 total-data">
 	<div class="row">
-<form class="form-inline" action="/action_page.php">
+<!--<form class="form-inline" action="/action_page.php">
   <div class="form-group">
     <label for="start-date">Aplication Start Date</label>
     <input class="date-picker" type="text" id="start-date" name="start-date">
     <input class="date-picker" type="text" id="end-date" name="end-date">
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
-</form> 
+</form>--> 
 
 		<!--<div class="col-sm-7 ">
 			<div class="bg-white clearfix">

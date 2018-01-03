@@ -22,6 +22,7 @@ Route::group(['middleware' => 'login'], function(){
 	Route::get('/dashboard', ['middleware' => 'acl:dashboard', 'as'=> 'dashboard', 'uses' => 'DashboardController@getCollection']);
 	Route::get('/processed', ['middleware' => 'acl:processed', 'as'=> 'processed', 'uses' => 'ProcessedController@getCollection']);
 	Route::get('/export', ['middleware' => 'acl:export', 'as'=> 'export', 'uses' => 'ExportController@exportCollection']);
+	Route::get('/useredit/{id}', ['middleware' => 'acl:dashboard', 'as'=> 'useredit', 'uses' => 'UserController@userEdit']);
 
 	//permissions
 	Route::get('/permissionlist', ['middleware' => 'acl:permissions', 'uses' => 'PermissionController@index'])->name('permissionlist');

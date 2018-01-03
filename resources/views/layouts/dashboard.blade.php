@@ -22,7 +22,6 @@
 				<div class="flex-container">
 				@include('partials.side-nav')
 				@yield('content')
-				@yield('dummy')
 				</div>
 			</div>
 		</div>
