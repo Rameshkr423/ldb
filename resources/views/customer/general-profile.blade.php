@@ -1,45 +1,47 @@
 <div id="general-info" class="tab-pane fade in active">
 	<div class="row">
 		@if(canAccess('personal-information'))
-		<div class="col-sm-4">
+		<div class="col-sm-5">
 			<div class="small-box">
 				<div class="sb-header">
 					<h5><b>Personal Information</b></h5>
-
 				</div>
 				<div class="sb-content">
 					<div class="sb-subcontent general-info">
 						<p>
 							@if(empty($userDetails['transactions']['user']['firstName']) === false && empty($userDetails['transactions']['user']['lastName']) === false) 
-							<i class="icon">
-							</i>
+							<label for="name">Name</label>
 								{{$userDetails['transactions']['user']['firstName']}} {{$userDetails['transactions']['user']['lastName']}}
 							@endif
 						</p>
 						<p>
-							@if(empty($userDetails['output']['identification']['agesResult']) === false && empty($userDetails['output']['identification']['agesResult']['maxMatched']['dob']) === false)
-							<i class="icon">
-							</i>
-								{{Carbon\Carbon::parse($userDetails['output']['identification']['agesResult']['maxMatched']['dob'])->age}} Years
-							@endif
+							<label for="date-of-birth">Date of Birth</label>
 						</p>
 						<p>
-							@if(empty($userDetails['transactions']['user']['emailId']) === false)
-							<i class="icon-mail">
-							</i> 
-								{{$userDetails['transactions']['user']['emailId']}}
-							@endif
+							<label for="address">Address</label>
+						</p>
+						<p>
+							<label for="tenure-of-residence">Tenure of residence at current address</label>
+						</p>
+						<p>
+							<label for="existing-customer">Existing SBI customer</label>
+						</p>
+						<p>
+							<label for="sbi-account-no">SBI Account Number</label>
+						</p>
+						<p>
+							<label for="tenure-of-relationship">Tenure of relationship with SBI</label>
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		@endif
-		@if(canAccess('educational-information'))
-		<div class="col-sm-4">
+		@if(canAccess('sbi-account-number'))
+		<div class="col-sm-3">
 			<div class="small-box">
 				<div class="sb-header">
-					<h5><b>Educational Details</b></h5>
+					<h5><b>SBI Account Number/CIF Number</b></h5>
 				</div>
 				<div class="sb-content">
 					<div class="sb-subcontent general-info">
@@ -94,11 +96,11 @@
 			</div>
 		</div>
 		@endif
-		@if(canAccess('network-depth'))
-		<div class="col-sm-4">
+		@if(canAccess('aadhaar-number'))
+		<div class="col-sm-3">
 			<div class="small-box">
 				<div class="sb-header">
-					<h5><b>Network Depth</b></h5>
+					<h5><b>Aadhaar Number</b></h5>
 				</div>
 				<div class="sb-content">
 					<div class="sb-subcontent">
@@ -148,7 +150,7 @@
 		</div>
 		@endif
 	</div>
-	<div class="row">
+	<!--<div class="row">
 		<div class="col-sm-4">
 			<div class="row">
 				@if(canAccess('key-highlights'))
@@ -515,6 +517,6 @@
 				</div>
 			@endif
 		@endif
-	</div>
+	</div>-->
 	@include('customer.status-btn')
 </div>
