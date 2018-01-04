@@ -197,5 +197,38 @@ $('#export-datepickers').on('change', function() {
     }
 });
 
+var startDate;
+ $("#start-date").datepicker({
+     timepicker:true,
+     minDate: 0,
+     initTime: true,
+     format: 'dd/mm/yyyy',
+     autoclose: true,
+     onChangeDateTime: function(dp,$input){
+        startDate = $("#start-date").val();
+    }
+});
+$("#end-date").datepicker({
+     timepicker:true,
+     initTime: true,
+     format: 'dd/mm/yyyy',
+     autoclose: true,
+     onClose: function(current_time, $input){
+        var endDate = $("#end-date").val();
+        if(startDate>endDate){
+               alert('Please select correct date');
+         }
+    }
+});
 
+$('#approved-circle').circleProgress({
+    value: $('.approved-circle-percent').attr('data-val'),
+    size: 100,
+    thickness: 8,
+    animation: false,
+    startAngle: 180.5,
+    fill: {
+      gradient: ["red"]
+    }
+});
 
