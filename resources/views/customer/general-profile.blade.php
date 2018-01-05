@@ -3,7 +3,7 @@
 		@if(canAccess('personal-information'))
 		<div class="col-sm-5">
 			<div class="small-box">
-				<div class="sb-header">
+				<div class="sb-header text-center ">
 					<h5><b>Personal Information</b></h5>
 				</div>
 				<div class="sb-content">
@@ -40,7 +40,7 @@
 		@if(canAccess('sbi-account-number'))
 		<div class="col-sm-3">
 			<div class="small-box">
-				<div class="sb-header">
+				<div class="sb-header text-center">
 					<h5><b>SBI Account Number/CIF Number</b></h5>
 				</div>
 				<div class="sb-content">
@@ -99,50 +99,30 @@
 		@if(canAccess('other-information'))
 		<div class="col-sm-3">
 			<div class="small-box">
-				<div class="sb-header">
+				<div class="sb-header text-center">
 					<h5><b>Other Information</b></h5>
 				</div>
 				<div class="sb-content">
 					<div class="sb-subcontent">
-						<span class="grade">
-							@if(empty($userDetails['output']['generalProfile']['networkDepth']) === false) 
-								{{$userDetails['output']['generalProfile']['networkDepth']}}
-							@else 
-								NA
-							@endif
-						</span>
-						<div class="network-depth">
-							<div class="row">
-								<div class="col-sm-4">
-									<p>
-										<i class="icon-linkedin-circled ln-color">
-										</i> 
-										@if(empty($userDetails['output']['generalProfile']['connections']['linkedin']) === false) 
-											{{$userDetails['output']['generalProfile']['connections']['linkedin']}}@if($userDetails['output']['generalProfile']['connections']['linkedin'] >= 500)
-												{{'+'}}
-											@endif
-										@endif
-									</p>
-								</div>
-								<div class="col-sm-4">
-									<p>
-										<i class="icon-facebook-circled fb-color">
-										</i>
-										@if(empty($userDetails['output']['generalProfile']['connections']['facebook']) === false) 
-											{{$userDetails['output']['generalProfile']['connections']['facebook']}}
-										@endif
-									</p>
-								</div>
-								<div class="col-sm-4">
-									<p>
-										<i class="icon-google-plus-circle gplus-color">						
-										</i>
-										@if(empty($userDetails['output']['generalProfile']['connections']['gplus']) === false) 
-											{{$userDetails['output']['generalProfile']['connections']['gplus']}}
-										@endif
-									</p>
-								</div>
-							</div>
+						<div class="sb-subcontent general-info">
+							<p>
+								<label for="date-of-birth">Date of Birth</label>
+							</p>
+							<p>
+								<label for="address">Address</label>
+							</p>
+							<p>
+								<label for="tenure-of-residence">Tenure of residence at current address</label>
+							</p>
+							<p>
+								<label for="existing-customer">Existing SBI customer</label>
+							</p>
+							<p>
+								<label for="sbi-account-no">SBI Account Number</label>
+							</p>
+							<p>
+								<label for="tenure-of-relationship">Tenure of relationship with SBI</label>
+							</p>
 						</div>
 					</div>
 				</div>

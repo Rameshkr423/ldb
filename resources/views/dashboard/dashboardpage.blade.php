@@ -7,6 +7,7 @@
 		@include('partials.notifications')
 		@include('partials.count')
 		@include('partials.overall-data')
+		@include('partials.line-chart-data')
 		@include('partials.filter')
 		<div class="col-sm-12">
 			<table class="table table-striped idscore-table font-13">
