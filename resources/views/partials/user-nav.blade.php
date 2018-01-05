@@ -4,38 +4,34 @@
 	</div>
 	<div class="col-sm-10">
 		<div class="user-details col-sm-10">
-			<h2>
 			@if(empty($userDetails['transactions']['user']['firstName']) === false && empty($userDetails['transactions']['user']['lastName']) === false)
 				{{$userDetails['transactions']['user']['firstName']}} {{$userDetails['transactions']['user']['lastName']}}
-			@endif
-			 | Customer Score : <span class="text-green">
-			@if(empty($userDetails['transactions']['score']['overallGrade']) === false)
-				{{$userDetails['transactions']['score']['overallGrade']}}
-			@endif
-			 </span> | Status : 
-			 @if(empty($userDetails['transactions']['transactionStatus']) === false)
-			 	{{$userDetails['transactions']['transactionStatus']}}
-			 @endif
-			 <span class="text-red">
-			 	
-			 </span></h2>
-			<p>
-			@if(empty($userDetails['transactions']['user']['emailId']) === false)
-				{{$userDetails['transactions']['user']['emailId']}} 
 			@endif
 			 | Reference Number : 
 			 <span class="text-blue">
 			 @if(empty($userDetails['transactions']['referenceNumber']) === false)
 			 	{{$userDetails['transactions']['referenceNumber']}}
 			 @endif
-			  </span> | 
-			 @if(empty($userDetails['transactions']['created_at']) === false)
+			  </span> | Application Request : 
+			 @if(empty($userDetails['transactions']['transactionStatus']) === false)
+			 	{{$userDetails['transactions']['transactionStatus']}}
+			 @endif
+			 <span class="text-red">
+			 	
+			 </span>
+			<p><b>Date</b> : 
+				@if(empty($userDetails['transactions']['created_at']) === false)
 			 @php
-			 	$time = date("g:i a", strtotime($userDetails['transactions']['created_at']));
+			 	$time = date("H:i:s", strtotime($userDetails['transactions']['created_at']));
 			 	$date = Carbon\Carbon::parse($userDetails['transactions']['created_at'])->format('d-m-Y');
 			 @endphp
 			 	{{$date}} {{$time}}
 			 @endif
+			@if(empty($userDetails['transactions']['user']['emailId']) === false)
+				{{$userDetails['transactions']['user']['emailId']}} 
+			@endif
+			 
+			 
 			  </p>
 			<div class="social-connect-report">
 				<span>

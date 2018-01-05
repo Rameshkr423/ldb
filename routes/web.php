@@ -41,3 +41,6 @@ Route::group(['middleware' => 'login'], function(){
 	Route::get('/upload', ['middleware' => 'acl:dashboard', 'uses' => 'UploadController@uploadFile'])->name('upload');
 
 Route::get('/logout', ['uses' => 'AuthController@logout'])->name('logout');
+
+//Overall analysis
+Route::get('/overalldata', ['as'=> 'overalldata', 'uses' => 'AnalysisController@getCollection']);

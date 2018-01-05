@@ -5,8 +5,17 @@
 	<div class="row">
 		<div class="ldb-main-tabs">
 			<ul class="nav nav-pills">
+				@if(!canAccess('dashboard'))
+				<li class="@if(Route::currentRouteName() == 'overalldata') active @endif"><a href="{{{ route('overalldata') }}}" class="@if(Route::currentRouteName() === 'overalldata') current @endif"><i class="icon-home-outline"></i>Home</a></li>
+				@endif
 				@if(canAccess('dashboard'))
-				<li class="@if(Route::currentRouteName() == 'dashboard') active @endif"><a href="{{{ route('dashboard') }}}" class="@if(Route::currentRouteName() === 'dashboard') current @endif"><i class="icon-home-outline"></i>Home</a></li>
+				<li class="@if(Route::currentRouteName() == 'dashboard') active @endif"><a href="{{{ route('dashboard') }}}" class="@if(Route::currentRouteName() === 'dashboard') current @endif"><i class="icon-home-outline"></i>Referral</a></li>
+				@endif
+				@if(canAccess('dashboard'))
+				<li class="@if(Route::currentRouteName() == 'dashboard') active @endif"><a href="{{{ route('dashboard') }}}" class="@if(Route::currentRouteName() === 'dashboard') current @endif"><i class="icon-home-outline"></i>Non - Referral</a></li>
+				@endif
+				@if(canAccess('dashboard'))
+				<li class="@if(Route::currentRouteName() == 'dashboard') active @endif"><a href="{{{ route('dashboard') }}}" class="@if(Route::currentRouteName() === 'dashboard') current @endif"><i class="icon-home-outline"></i>Processed</a></li>
 				@endif
 				<!--
 				@if(canAccess('processed'))
@@ -28,7 +37,9 @@
 				<li class="@if(Route::currentRouteName() == 'executives') active @endif"><a href="{{{ route('executivelist') }}}"><i class="icon-upload-cloud-outline"></i>Lender Executives</a></li>
 				@endif
 				-->
+				@if(canAccess('dashboard'))
 				<li><a href="{{{ route('logout') }}}"><i class="icon-logout"></i>Logout</a></li>
+				@endif
 			</ul>
 		</div>
 	</div>
