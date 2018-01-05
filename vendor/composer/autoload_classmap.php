@@ -17,7 +17,6 @@ return array(
     'App\\Http\\Controllers\\DashboardController' => $baseDir . '/app/Http/Controllers/DashboardController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
-    'App\\Http\\Middleware\\JwtAuthentication' => $baseDir . '/app/Http/Middleware/JwtAuthentication.php',
     'App\\Http\\Middleware\\Login' => $baseDir . '/app/Http/Middleware/Login.php',
     'App\\Http\\Middleware\\PermissionCheck' => $baseDir . '/app/Http/Middleware/PermissionCheck.php',
     'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',
